@@ -1,6 +1,6 @@
-﻿using Consumer.Repositories;
-using Consumer.Services;
-using MessageReceiver.Repositories;
+﻿using Consumer.Services;
+using DataAccess;
+using DataAccess.Repositories;
 using MessageReceiver.Services;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -12,7 +12,7 @@ namespace ConsoleApp11
         {
             var serviceProvider = new ServiceCollection()
                 .AddSingleton<ApplicationContext, ApplicationContext>()
-                .AddSingleton<UserRepository, UserRepository>()
+                .AddSingleton<IUserRepository, UserRepository>()
                 .AddSingleton<UserService, UserService>()
                 .AddSingleton<MessageProcessor, MessageProcessor>()
                 .BuildServiceProvider();

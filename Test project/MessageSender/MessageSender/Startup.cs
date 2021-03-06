@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataAccess;
+using DataAccess.Repositories;
 using MessageSender.Controllers;
 using MessageSender.Services;
 using Microsoft.AspNetCore.Builder;
@@ -29,8 +31,9 @@ namespace MessageSender
         {
             services.AddControllers();
             services.AddSingleton<MessageService, MessageService>();
+            services.AddSingleton<ApplicationContext, ApplicationContext>();
+            services.AddSingleton<IUserRepository, UserRepository>();
             services.AddSingleton<UserService, UserService>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

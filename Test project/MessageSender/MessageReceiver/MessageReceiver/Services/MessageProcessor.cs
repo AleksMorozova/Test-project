@@ -45,10 +45,6 @@ namespace MessageReceiver.Services
                             var userName = Encoding.UTF8.GetString(body);
                             _userService.CreateUser(userName);
                             break;
-                        case OperationType.All:
-                            _userService.GetAllUser().ForEach(user => Console.WriteLine(user.Name));
-
-                            break;
                         default:
                             Console.WriteLine("Default case");
                             break;

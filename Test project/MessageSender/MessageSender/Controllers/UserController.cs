@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using DomainModel;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MessageSender.Controllers
@@ -20,9 +22,9 @@ namespace MessageSender.Controllers
         }
 
         [HttpGet("all")]
-        public void All()
+        public List<User> All()
         {
-            _userService.GetAllUser();
+            return _userService.GetAllUser();
         }
     }
 }
