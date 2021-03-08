@@ -11,7 +11,7 @@ namespace ConsoleApp11
         static void Main(string[] args)
         {
             var serviceProvider = new ServiceCollection()
-                .AddSingleton<ApplicationContext, ApplicationContext>()
+                .AddSingleton<ApplicationContext>()
                 .AddSingleton<IUserRepository, UserRepository>()
                 .AddSingleton<UserService, UserService>()
                 .AddSingleton<MessageProcessor, MessageProcessor>()

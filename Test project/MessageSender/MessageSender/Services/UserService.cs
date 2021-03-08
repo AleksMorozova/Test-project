@@ -18,7 +18,7 @@ namespace MessageSender.Controllers
 
         public void AddUser(string userName)
         {
-            _messageService.SendMessage("Add", userName);
+            _messageService.SendMessage(userName);
         }
 
         public List<User> GetAllUser()

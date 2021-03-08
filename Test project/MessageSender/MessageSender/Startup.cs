@@ -31,7 +31,7 @@ namespace MessageSender
         {
             services.AddControllers();
             services.AddSingleton<MessageService, MessageService>();
-            services.AddSingleton<ApplicationContext, ApplicationContext>();
+            services.AddSingleton<ApplicationContext>();
             services.AddSingleton<IUserRepository, UserRepository>();
             services.AddSingleton<UserService, UserService>();
         }
