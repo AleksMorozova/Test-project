@@ -1,5 +1,4 @@
-﻿using Consumer.Services;
-using RabbitMQ.Client;
+﻿using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System;
 using System.Text;
@@ -8,7 +7,7 @@ namespace MessageReceiver.Services
 {
     class MessageProcessor
     {
-        private UserService _userService;
+        private readonly UserService _userService;
         public MessageProcessor(UserService userService)
         {
             _userService = userService;

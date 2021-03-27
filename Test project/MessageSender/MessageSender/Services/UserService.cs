@@ -1,5 +1,4 @@
 ﻿using DataAccess;
-using DataAccess.Repositories;
 using DomainModel;
 using MessageSender.Services;
 using Microsoft.Extensions.Logging;

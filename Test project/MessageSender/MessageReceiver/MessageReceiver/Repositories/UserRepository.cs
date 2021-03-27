@@ -1,5 +1,4 @@
-﻿using Consumer.Models;
-using MessageReceiver.Repositories;
+﻿using MessageReceiver.Models;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
@@ -7,11 +6,11 @@ using Serilog;
 using System;
 using System.Collections.Generic;
 
-namespace Consumer.Repositories
+namespace MessageReceiver.Repositories
 {
     class UserRepository
     {
-        private ApplicationContext _applicationContext;
+        private readonly ApplicationContext _applicationContext;
 
         public UserRepository(ApplicationContext applicationContext)
         {

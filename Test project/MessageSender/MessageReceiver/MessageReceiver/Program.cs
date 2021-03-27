@@ -1,13 +1,11 @@
-﻿using Consumer.Services;
+﻿using MessageReceiver.Services;
 using DataAccess;
 using DataAccess.Repositories;
-using MessageReceiver.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Serilog;
-using Serilog.Extensions.Logging;
 
-namespace ConsoleApp11
+namespace MessageReceiver
 {
     class Program
     {
