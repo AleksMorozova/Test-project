@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using DomainModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MessageSender.Controllers
 {
     [Route("[controller]")]
+    [Authorize]
     [ApiController]
     public class UserController : ControllerBase
     {
-        private UserService _userService;
+        private readonly UserService _userService;
         public UserController(UserService userService)
         {
             _userService = userService;
